@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "testBLE",
+  "short_name": "testBLE",
+  "version": "de.phonegab.ble.test",
+  "description": "A blank PhoneGap app.",
+  "author": "PhoneGap Team",
+  "icons": [],
+  "start_url": "index.html"
+}

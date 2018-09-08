@@ -2,11 +2,11 @@
 <widget id="de.phonegab.ble.test" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>testBLE</name>
     <description>
-        A blank PhoneGap app.
-    </description>
+    A blank PhoneGap app.
+  </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
-    </author>
+    PhoneGap Team
+  </author>
     <content src="index.html" />
     <access origin="*" />
     <engine name="browser" spec="~5.0.4" />
@@ -15,4 +15,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <plugin name="cordova-plugin-vibration" spec="~3.1.0" />
+    <plugin name="cordova.plugins.diagnostic" source="npm" />
+    <preference name="phonegap-version" value="cli-6.4.0" />
+    <engine name="android" spec="~7.0.0" />
 </widget>

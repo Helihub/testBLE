@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "veganStyle";
+    src: url("./fonts/vegan-style.ttf") format('truetype');
+}
+
+body {
+    font-family:Verdana, Geneva, sans-serif
+}
+
+#myheader {
+    background-color: #575757;
+    border-color: #575757;
+    text-align: left;
+}
+
+h1 {
+    text-align: left;
+    font-family: veganStyle, Verdana, sans-serif
+}
+
+.ui-bar {
+    padding: 10%;
+    text-align: center;
+    vertical-align: central;
+}
+
+.ui-bar, .acol, .ui-collapsible-heading-toggle {
+    background-color: #575757 !important;
+    border-color: #575757 !important;
+    margin: 0px;
+}
+
+i {
+    font-size: 40px;
+}
+
+.ui-focus,
+.ui-btn:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+h1, i, label {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+/* Custom indentations are needed because the length of custom labels differs from
+        the length of the standard labels */
+.custom-size-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
+    text-indent: 0em;
+}
+
+.custom-size-flipswitch.ui-flipswitch .ui-flipswitch-off {
+    text-indent: 0em;
+}
+/* Custom widths are needed because the length of custom labels differs from
+        the length of the standard labels */
+.custom-size-flipswitch.ui-flipswitch {
+    width: 100%;
+}
+
+    .custom-size-flipswitch.ui-flipswitch.ui-flipswitch-active {
+        padding-left: 50%;
+        width: 50%;
+    }
+
+@media (min-width: 28em) {
+                 /*Repeated from rule .ui-flipswitch above*/
+                 .ui-field-contain > label + .custom-size-flipswitch.ui-flipswitch {
+                     width: 100%;
+                 }
+             }
+#deviceList {
+    margin: 5%;
+}

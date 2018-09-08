@@ -3,49 +3,78 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Test BLE</title>
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+    <title>Feel the Beat</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <style>
+    </style>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-    <div class="ui-page" data-role="page">
-        <div class="ui-header" data-role="header" data-position="fixed" role="banner">
-            <h1>BLE Test</h1>
+    <div-- id="mainPage" class="ui-page" data-role="page">
+        <div id="myheader" data-role="header">
+            <h1>Feel the Beat</h1>
         </div>
-        <fieldset class="ui-grid-a">
-            <div class="ui-block-b">
-                <div class="ui-btn">
-                    <!--div data-corners="false" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="flat-settings" data-theme="a" data-disabled="false" class="ui-btn ui-shadow ui-btn-icon-left ui-btn-up-a" aria-disabled="false"-->
-                    <button id="scanButton" onclick="startBLEscan()" class="ui-btn-hidden" data-corners="false" data-disabled="false">
-                        <span class="ui-icon ui-icon-flat-settings ui-icon-shadow">&nbsp;</span>
-                        Start Scan
-                    </button>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a" style="height:60px">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <div class="ui-bar ui-bar-a" style="height:60px">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div class="ui-bar ui-bar-a" style="height:60px">
+                                <form>
+                                    <input data-role="flipswitch" name="flip-checkbox-3" id="flip-checkbox-3" data-on-text=" " data-off-text=" " data-wrapper-class="custom-size-flipswitch" type="checkbox">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="ui-block-c">
+                            <div class="ui-bar ui-bar-a" style="height:60px">
+                                <i class="fab fa-bluetooth-b"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="ui-block-b">
-                <div class="ui-btn">
-                    <button id="stopButton" onclick="stopBLEscan()" class="ui-btn-hidden" data-corners="false" data-disabled="false">
-                        <span class="ui-icon ui-icon-flat-new ui-icon-shadow">&nbsp;</span>
-                        Stop Scan
-                    </button>
+                <div class="ui-bar ui-bar-a" style="height:60px">
+                    <label id="status">Smartphone Mode</label>
                 </div>
             </div>
-            <div class="ui-block-b">
-                <div class="ui-btn">
-                    <button id="stopButton" onclick="startDisconnect()" class="ui-btn-hidden" data-corners="false" data-disabled="false">
-                        <span class="ui-icon ui-icon-flat-new ui-icon-shadow">&nbsp;</span>
-                        Disconnect
-                    </button>
+        </div>
+        <div class="acol" data-role="collapsible" data-inset="false" data-iconpos="top">
+            <h4></h4>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"><input id="scanButton" onclick="startBLEscan()" value="Search Device" type="button"></div>
+                <div class="ui-block-b"><input id="disconnectBtn" onclick="startDisconnect()" value="Disconnect" type="button" disabled></div>
+            </fieldset>
+            <ul id="deviceList" data-role="listview" data-inset="true">
+                <li><h2>Gefundene Geräte</h2></li>
+                <li>Acura</li>
+                <li>Audi</li>
+                <li>BMW</li>
+                <li>Cadillac</li>
+                <li>Ferrari</li>
+            </ul>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-b">
+                    <div class="ui-btn">
+                        <button id="stopButton" onclick="stopBLEscan()" class="ui-btn-hidden" data-corners="false" data-disabled="false">
+                            <span class="ui-icon ui-icon-flat-new ui-icon-shadow">&nbsp;</span>
+                            Stop Scan
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </fieldset>
-        <ul id="deviceList" class="ui-listview ui-listview-inset ui-shadow" data-corners="false" data-role="listview" data-inset="true">
-            <li id="status" data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-d ui-first-child">Status: Waiting for scan.</li>
-        </ul>
+            </fieldset>
+        </div>
         <div class="ui-select">
             <div class="ui-btn">
                 <select id="options" class="ui-btn-hidden" data-corners="false" data-disabled="false" role="button">
@@ -62,7 +91,7 @@
             <fieldset class="ui-grid-a">
                 <div class="ui-block-b">
                     <div class="ui-btn">
-                       <button id="scanButton" onclick="playMusic()" class="ui-btn-hidden" data-corners="false" data-disabled="false">
+                        <button id="scanButton" onclick="playMusic()" class="ui-btn-hidden" data-corners="false" data-disabled="false">
                             <span class="ui-icon ui-icon-flat-settings ui-icon-shadow">&nbsp;</span>
                             Play
                         </button>
@@ -78,7 +107,5 @@
                 </div>
             </fieldset>
         </div>
-
-    </div>
 </body>
 </html>

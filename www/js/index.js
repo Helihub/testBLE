@@ -14,7 +14,7 @@ var audioplayer;
 function onDeviceReady() {
     //TODO check navigation on
     changeStatus("Status: Ready to scan!", 'green', "device ready");
-    $('#deviceList :not(:first-child)').empty();
+    //$('#deviceList :not(:first-child)').empty();
     connectedDevice = undefined;
     vibNum = undefined;
     maxFreq = undefined;
@@ -76,6 +76,7 @@ function list(device) {
     console.log(JSON.stringify(device));
     var lable = (!(device.name)) ? device.id : device.name;
     $('#deviceList').append('<li onclick="startConnect(this.id)" id="' + device.id + '">' + lable + '</li>');
+    $('#deviceList').listview("refresh");
 }
 
 function startDisconnect() {

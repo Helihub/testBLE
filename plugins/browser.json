@@ -12,6 +12,9 @@
     },
     "cordova-plugin-compat": {
       "PACKAGE_NAME": "de.phonegab.ble.test"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "de.phonegab.ble.test"
     }
   },
   "dependent_plugins": {}

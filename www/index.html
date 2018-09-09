@@ -77,7 +77,7 @@
         </div>
         <form class="danceOptions">
             <div class="ui-field-contain">
-                <select name="select-native-1" id="myselect">
+                <select name="select-native-1" id="select-native-1">
                     <!--id="select-native-1"-->
                     <option value="1"><lable class="danceName">Slow Walz</lable></option>
                     <option value="2"><lable class="danceName">Tango</lable></option>
@@ -91,7 +91,7 @@
             <div class="audioplayerWrapper">
                 <audio id="audioplayer"
                        controls controlsList="nodownload">
-                    <source src="music/slow_waltz.mp3" />
+                    <source id="music" src="music/slow_waltz.mp3" />
                     Your browser does not support the
                     <code>audio</code> element.
                 </audio>
@@ -101,5 +101,51 @@
             <h3></h3>
             <a id="info" class="ui-btn-right ui-btn "><i class="fas fa-info-circle"></i></a>
         </div>
+        <script>
+            var player = document.getElementById("audioplayer");
+            player.addEventListener("play", function () {
+                var optValueSelected = $('#select-native-1').find('option:selected').val();
+                switch (optValueSelected) {
+                    case "1":
+                        setTimeout(function () { navigator.vibrate([800, 200, 200, 200, 200, 2000]) }, 1000);
+                        console.log("slow");
+                        break;
+                    case "2":
+                        setTimeout(function () { navigator.vibrate([800, 20, 20, 20, 20]) }, 1000);
+                        console.log("Tango");
+                        break;
+                    case "3":
+                        setTimeout(function () { navigator.vibrate(1000) }, 10);
+                        break;
+                    default:
+                        console.log("diff");
+                        break;
+                }
+            });
+
+            $('#select-native-1').change(function () {
+                var optValueSelected = $(this).find('option:selected').val();
+                switch (optValueSelected) {
+                    case "1":
+                        $("#music").attr("src", "music/slow_waltz.mp3");
+                        console.log("slow");
+                        break;
+                    case "2":
+                        $("#music").attr("src", "http://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3");
+                        console.log("Tango");
+                        break;
+                    case "3":
+                        $("#music").attr("src", "http://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3");
+                        console.log("chacha")
+                        break;
+                    default:
+                        console.log("diff");
+                        break;
+                }
+                player.pause();
+                player.load();
+
+            });
+        </script>
 </body>
 </html>

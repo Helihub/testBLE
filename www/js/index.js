@@ -194,7 +194,3 @@ function writefail() {
 function succ() {
     console.log("suss write, now here...");
 }
-
-$('#current-option').change(function () {
-    $('#thelabel').text($(this).val());
-});

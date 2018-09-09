@@ -2,56 +2,50 @@
     font-family: "veganStyle";
     src: url("./fonts/vegan-style.ttf") format('truetype');
 }
+@media (min-width: 28em) {
+    /*Repeated from rule .ui-flipswitch above*/
+    .ui-field-contain > label + .custom-size-flipswitch.ui-flipswitch {
+        width: 100%;
+    }
+}
 
 body {
-    font-family:Verdana, Geneva, sans-serif
+    font-family: Verdana, Geneva, sans-serif;
 }
-
-#myheader {
-    background-color: #575757;
-    border-color: #575757;
-    text-align: left;
-}
-
 h1 {
+    font-size: 30px !important;
+}
+h1, h3 {
     text-align: left;
-    font-family: veganStyle, Verdana, sans-serif
+    font-family: veganStyle, Verdana, sans-serif;
+    font-size: 30px !important;
 }
-
-.ui-bar {
-    padding: 10%;
-    text-align: center;
-    vertical-align: central;
+h1, i, label {
+    color: #fff;
+    text-shadow: none;
 }
-
-.ui-bar, .acol, .ui-collapsible-heading-toggle {
-    background-color: #575757 !important;
-    border-color: #575757 !important;
-    margin: 0px;
+h4 {
+    color: #235784 !important;
+    text-shadow: none !important;
 }
-
 i {
     font-size: 40px;
 }
-
-.ui-focus,
-.ui-btn:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+.audioplayerWrapper {
+    margin: 0 auto;
+    display: table;
+    background-color: #40a8c4;
 }
-
-h1, i, label {
-    color: #ffffff;
-    text-shadow: none;
+.audioplayerWrap {
+    background-color: #40a8c4;
+    border: none;
+    padding: 5%;
 }
-
 /* Custom indentations are needed because the length of custom labels differs from
         the length of the standard labels */
 .custom-size-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
     text-indent: 0em;
 }
-
 .custom-size-flipswitch.ui-flipswitch .ui-flipswitch-off {
     text-indent: 0em;
 }
@@ -60,18 +54,48 @@ h1, i, label {
 .custom-size-flipswitch.ui-flipswitch {
     width: 100%;
 }
-
     .custom-size-flipswitch.ui-flipswitch.ui-flipswitch-active {
         padding-left: 50%;
         width: 50%;
     }
-
-@media (min-width: 28em) {
-                 /*Repeated from rule .ui-flipswitch above*/
-                 .ui-field-contain > label + .custom-size-flipswitch.ui-flipswitch {
-                     width: 100%;
-                 }
-             }
+.ui-bar {
+    padding: 10%;
+    text-align: center;
+    vertical-align: central;
+}
+.ui-bar, .acol, .ui-collapsible-heading-toggle {
+    background-color: #235784 !important;
+    border-color: #235784 !important;
+    margin: 0px;
+}
+.ui-focus, .ui-btn:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.ui-field-contain, .ui-field-contain * {
+    background-color: #40a8c4 !important;
+    border-color: #40a8c4 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: white !important;
+    font-size: large;
+    font-family: Verdana, sans-serif;
+}
 #deviceList {
     margin: 5%;
 }
+#info {
+    background-color: #bcdbdf !important;
+    border: none;
+}
+#myheader {
+    background-color: #f7aa00;
+    border-color: #f7aa00;
+}
+#myfooter {
+    background-color: #bcdbdf;
+    border-color: #bcdbdf;
+}
+
+

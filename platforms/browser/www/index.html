@@ -17,7 +17,7 @@
 </head>
 <body>
     <div-- id="mainPage" class="ui-page" data-role="page">
-        <div id="myheader" data-role="header">
+        <div id="myheader" data-role="header" data-position="fixed">
             <h1>Feel the Beat</h1>
         </div>
         <div class="ui-grid-a">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="ui-block-b">
                             <div class="ui-bar ui-bar-a" style="height:60px">
-                                <form>
+                                <form id="myFlip" onclick="onDeviceReady()">
                                     <input data-role="flipswitch" name="flip-checkbox-3" id="flip-checkbox-3" data-on-text=" " data-off-text=" " data-wrapper-class="custom-size-flipswitch" type="checkbox">
                                 </form>
                             </div>
@@ -50,8 +50,8 @@
                 </div>
             </div>
         </div>
-        <div class="acol" data-role="collapsible" data-inset="false" data-iconpos="top">
-            <h4></h4>
+        <div id="BLECollapsile" class="acol" data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+            <h6>.</h6>
             <fieldset class="ui-grid-a">
                 <div class="ui-block-a"><input id="scanButton" onclick="startBLEscan()" value="Search Device" type="button"></div>
                 <div class="ui-block-b"><input id="disconnectBtn" onclick="startDisconnect()" value="Disconnect" type="button" disabled></div>
@@ -75,37 +75,31 @@
                 </div>
             </fieldset>
         </div>
-        <div class="ui-select">
-            <div class="ui-btn">
-                <select id="options" class="ui-btn-hidden" data-corners="false" data-disabled="false" role="button">
-                    Options
-                    <option value="standard">Option 1</option>
-                    <option value="rush">Option 2</option>
-                    <option value="express">Option 3</option>
-                    <option value="overnight">Option 4</option>
+        <form class="danceOptions">
+            <div class="ui-field-contain">
+                <select name="select-native-1" id="myselect">
+                    <!--id="select-native-1"-->
+                    <option value="1"><lable class="danceName">Slow Walz</lable></option>
+                    <option value="2"><lable class="danceName">Tango</lable></option>
+                    <option value="3"><lable class="danceName">Cha Cha</lable> </option>
                 </select>
+
+            </div>
+
+        </form>
+        <div class="audioplayerWrap">
+            <div class="audioplayerWrapper">
+                <audio id="audioplayer"
+                       controls controlsList="nodownload">
+                    <source src="music/slow_waltz.mp3" />
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
             </div>
         </div>
-        <div>
-            <audio id="audioplayer" src="music/slow_waltz.mp3"></audio>
-            <fieldset class="ui-grid-a">
-                <div class="ui-block-b">
-                    <div class="ui-btn">
-                        <button id="scanButton" onclick="playMusic()" class="ui-btn-hidden" data-corners="false" data-disabled="false">
-                            <span class="ui-icon ui-icon-flat-settings ui-icon-shadow">&nbsp;</span>
-                            Play
-                        </button>
-                    </div>
-                </div>
-                <div class="ui-block-b">
-                    <div class="ui-btn">
-                        <button id="stopButton" onclick="stopMusic()" class="ui-btn-hidden" data-corners="false" data-disabled="false">
-                            <span class="ui-icon ui-icon-flat-new ui-icon-shadow">&nbsp;</span>
-                            Stop
-                        </button>
-                    </div>
-                </div>
-            </fieldset>
+        <div id="myfooter" data-role="footer" data-position="fixed">
+            <h3></h3>
+            <a id="info" class="ui-btn-right ui-btn "><i class="fas fa-info-circle"></i></a>
         </div>
 </body>
 </html>

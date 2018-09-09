@@ -39,7 +39,7 @@ module.exports.metadata =
     "cordova-plugin-ble-central": "1.2.2",
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-vibration": "3.1.0",
-    "cordova.plugins.diagnostic": "4.0.10"
+    "cordova-plugin-geolocation": "4.0.1"
 }
 // BOTTOM OF METADATA
 });

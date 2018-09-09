@@ -16,7 +16,7 @@
         "cordova-plugin-vibration": {
             "PACKAGE_NAME": "de.phonegab.ble.test"
         },
-        "cordova.plugins.diagnostic": {
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "de.phonegab.ble.test"
         }
     },
@@ -59,6 +59,6 @@
         "cordova-plugin-ble-central": "1.2.2",
         "cordova-plugin-compat": "1.2.0",
         "cordova-plugin-vibration": "3.1.0",
-        "cordova.plugins.diagnostic": "4.0.10"
+        "cordova-plugin-geolocation": "4.0.1"
     }
 }

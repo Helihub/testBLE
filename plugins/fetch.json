@@ -23,10 +23,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova.plugins.diagnostic": {
+  "cordova-plugin-geolocation": {
     "source": {
       "type": "registry",
-      "id": "cordova.plugins.diagnostic@4.0.10"
+      "id": "cordova-plugin-geolocation@4.0.1"
     },
     "is_top_level": true,
     "variables": {}
